@@ -1,0 +1,20 @@
+{
+  "name": "demo",
+  "description": "node express",
+  "version": "0.1.0",
+  "main": "server",
+  "engines": {
+    "node": ">=0.10.22"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.10.6",
+    "mysql": "^2.9.0"
+  },
+  "author": {
+    "name": "gaurav gupta",
+    "email": "gaurav_bng@hotmail.com",
+    "github": "https://github.com/gauravgupta90",
+    "linkedin": "https://in.linkedin.com/pub/gaurav-gupta/83/837/657"
+  }
+}
