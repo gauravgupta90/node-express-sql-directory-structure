@@ -1,11 +1,12 @@
 'use strict';
 
-var connection = require('../config/db').connection;
+var connection = require('../config/db').connection,
+    databaseName = require('../config/config').database.database;
 
 exports.createUser = function (req,res,next) {
     var data = req.body;
 
-    var query = "INSERT INTO testDatabase.user " +
+    var query = "INSERT INTO "+databaseName+".user " +
             "(userid, user_name)" +
             "VALUES (?,?)";
 
@@ -27,7 +28,7 @@ exports.getUser = function (req,res,next) {
 
     if(!userid) return res.json("user name doesn't exist").status(400);
     else{
-    	var query = "SELECT * FROM testDatabase.user " +
+    	var query = "SELECT * FROM "+databaseName+".user " +
             "WHERE userid='" + userid+"'";
 
         connection.query(query, function(err, result) {

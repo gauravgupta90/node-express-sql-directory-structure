@@ -15,4 +15,4 @@ var port = config.server.port;	// get port number where server should run from c
 
 app.listen(port);	// make express server listen at specific port
 
-console.log('App started on port ' + port);
+console.log('Express server started on port ' + port);
